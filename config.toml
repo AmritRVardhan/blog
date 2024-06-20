@@ -7,24 +7,19 @@ pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 [params]
-	mode="auto"
+	mode="dark"
 	useCDN=false
-	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
+	subtitle = "Machine Learning Blogs and more"
 
 [[params.social]]
 name = "GitHub"
 icon = "github"
-url = "https://github.com/athul/archie"
+url = "https://github.com/AmritRVardhan"
 
 [[params.social]]
-name = "Twitter"
-icon = "twitter"
-url = "https://twitter.com/athulcajay/"
-
-[[params.social]]
-name = "GitLab"
-icon = "gitlab"
-url = "https://gitlab.com/athul/"
+name = "Linkedin"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/amrit-raj-vardhan/"
 
 [[menu.main]]
 name = "Home"
@@ -39,12 +34,12 @@ weight = 2
 [[menu.main]]
 name = "About"
 url = "/about"
-weight = 3
+weight = 4
 
 [[menu.main]]
 name = "Heatmap"
 url = "/heatmap"
-weight = 4
+weight = 3
 
 [[menu.main]]
 name = "Tags"

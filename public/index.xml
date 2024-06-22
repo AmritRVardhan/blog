@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archie</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Archie</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Athul</copyright>
+    <lastBuildDate>Wed, 19 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>Hi, I am Amrit. I am a software developer by profession. I am interested in Machine Learning, Deep Learning, and the field of Data Science.&#xA;I have a Masters in Computer Science from University of Illinois, Chicago. I worked in Barclays after my undergrad as a SWE for 3+ years. I helped save my organization, cut costs by automating multiple processes. I have developed multiple end-to-end software solutions that required me to do architectural decisions, which included, but not limited to, making Proof-of-concepts, SDD/PDDs, development plan, leading teams, talking to shareholders, developing/coding, doing SITs/UATs, deploying the code in production and providing Level3 support according to the SLA.</description>
+    </item>
+    <item>
+      <title>Creating a Conversational Agent</title>
+      <link>http://localhost:1313/posts/post-1/</link>
+      <pubDate>Mon, 01 Apr 2024 02:01:58 +0530</pubDate>
+      <guid>http://localhost:1313/posts/post-1/</guid>
+      <description>You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.&#xA;It all keeps piling up, and it can feel overwhelming.&#xA;How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/archives/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

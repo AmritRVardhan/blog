@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Archie</title>
+    <title>Posts on Amrit Raj Vardhan</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Archie</description>
+    <description>Recent content in Posts on Amrit Raj Vardhan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>© Athul</copyright>
     <lastBuildDate>Mon, 01 Apr 2024 02:01:58 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating a Conversational Agent</title>
+      <title>Creating a Conversational Agent - Part 1</title>
       <link>http://localhost:1313/posts/post-1/</link>
       <pubDate>Mon, 01 Apr 2024 02:01:58 +0530</pubDate>
       <guid>http://localhost:1313/posts/post-1/</guid>

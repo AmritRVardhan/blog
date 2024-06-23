@@ -1,7 +1,7 @@
 ---
-title: "Creating a Conversational Agent"
+title: "Creating a Conversational Agent - Part 1"
 date: 2024-04-01T02:01:58+05:30
-description: "Meow"
+description: "Building a conversational agent using LLMs"
 tags: [ai, agents]
 ---
 

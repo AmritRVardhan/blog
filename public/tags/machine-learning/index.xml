@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine-Learning on Amrit Raj Vardhan</title>
+    <link>http://localhost:1313/tags/machine-learning/</link>
+    <description>Recent content in Machine-Learning on Amrit Raj Vardhan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Jun 2024 02:01:58 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning Basics</title>
+      <link>http://localhost:1313/posts/all-things-machine-learning/</link>
+      <pubDate>Tue, 25 Jun 2024 02:01:58 +0530</pubDate>
+      <guid>http://localhost:1313/posts/all-things-machine-learning/</guid>
+      <description>This is a question bank. At any point of time, I won&amp;rsquo;t think that this question is too basic. I do not want to have knowledge gaps. Over time, I will try to sort this on topics and increasing difficulty. I will have to go through this arduous process and it&amp;rsquo;ll be fun. There should be code with theory, else what is theory if not applied? &amp;lsquo;Here&amp;rsquo; would be the link for codes.</description>
+    </item>
+  </channel>
+</rss>

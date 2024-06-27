@@ -6,14 +6,28 @@
     <description>Recent content in Posts on Amrit Raj Vardhan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2024 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 25 Jun 2024 02:01:58 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning Basics</title>
+      <link>http://localhost:1313/posts/all-things-machine-learning/</link>
+      <pubDate>Tue, 25 Jun 2024 02:01:58 +0530</pubDate>
+      <guid>http://localhost:1313/posts/all-things-machine-learning/</guid>
+      <description>This is a question bank. At any point of time, I won&amp;rsquo;t think that this question is too basic. I do not want to have knowledge gaps. Over time, I will try to sort this on topics and increasing difficulty. I will have to go through this arduous process and it&amp;rsquo;ll be fun. There should be code with theory, else what is theory if not applied? &amp;lsquo;Here&amp;rsquo; would be the link for codes.</description>
+    </item>
+    <item>
+      <title>Links for Hugo based static website deployed in Github Pages</title>
+      <link>http://localhost:1313/posts/deploying-this-website/</link>
+      <pubDate>Sun, 23 Jun 2024 02:01:58 +0530</pubDate>
+      <guid>http://localhost:1313/posts/deploying-this-website/</guid>
+      <description>These are the walkthroughs/links that helped me deploy this website on Github Pages.&#xA;I procrastinate a lot, so I googled along the lines of &amp;ldquo;Best blog hosted on Github Pages&amp;rdquo; and I chose the first thing I stumbled upon, which was, Archie theme under Hugo.&#xA;Hugo installation can be followed here&#xA;Installed hugo locally and started working on setting up the website locally before deploying it on Github Pages. I had to copy all the files present in themes/archie folder to the root folder after cloning the repo.</description>
+    </item>
     <item>
       <title>Creating a Conversational Agent - Part 1</title>
       <link>http://localhost:1313/posts/post-1/</link>
       <pubDate>Mon, 01 Apr 2024 02:01:58 +0530</pubDate>
       <guid>http://localhost:1313/posts/post-1/</guid>
-      <description>You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.&#xA;It all keeps piling up, and it can feel overwhelming.&#xA;How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?</description>
+      <description>This is the iteration 1 for creating and understanding Agentic views of Conversational AIs. Agentic AIs have recently shown to outperform LLMs alone. MoA has recently beaten GPT-4o.&#xA;I installed Ollama, pulled Lllama-3 8b, read about crewai, played around with Agents and their respective Tools, Actions, Tasks. I plan to extensively use it for my own applications.&#xA;Below is the code for the implementaiton&#xA;from crewai import Task, Agent, Crew, Process from crewai_tools import tool from langchain.</description>
     </item>
   </channel>
 </rss>

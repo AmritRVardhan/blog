@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Amrit Raj Vardhan</title>
+    <link>http://localhost:1313/tags/github/</link>
+    <description>Recent content in Github on Amrit Raj Vardhan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Jun 2024 02:01:58 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links for Hugo based static website deployed in Github Pages</title>
+      <link>http://localhost:1313/posts/deploying-this-website/</link>
+      <pubDate>Sun, 23 Jun 2024 02:01:58 +0530</pubDate>
+      <guid>http://localhost:1313/posts/deploying-this-website/</guid>
+      <description>These are the walkthroughs/links that helped me deploy this website on Github Pages.&#xA;I procrastinate a lot, so I googled along the lines of &amp;ldquo;Best blog hosted on Github Pages&amp;rdquo; and I chose the first thing I stumbled upon, which was, Archie theme under Hugo.&#xA;Hugo installation can be followed here&#xA;Installed hugo locally and started working on setting up the website locally before deploying it on Github Pages. I had to copy all the files present in themes/archie folder to the root folder after cloning the repo.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,62 +1,93 @@
 ---
-title: "Creating a Conversational Agent - Part 1"
+title: "Creating Conversational Agents - Part 1"
 date: 2024-04-01T02:01:58+05:30
 description: "Building a conversational agent using LLMs"
 tags: [ai, agents]
 ---
 
-You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.
+This is the iteration 1 for creating and understanding Agentic views of Conversational AIs. Agentic AIs have recently shown to outperform LLMs alone. MoA has recently beaten GPT-4o.
 
-It all keeps piling up, and it can feel overwhelming.
+I installed [Ollama](https://python.langchain.com/v0.2/docs/integrations/llms/ollama/#via-langchain), pulled Lllama-3 8b, read about crewai, played around with Agents and their respective Tools, Actions, Tasks. I plan to extensively use it for my own applications.
 
-How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?
 
-In this primer, I’ll look at some key strategies and tactics for taking on an overloaded life with an open heart, lots of energy, and a smile on your face.
+Below is the code for the implementaiton
+```
+from crewai import Task, Agent, Crew, Process
+from crewai_tools import tool
 
-## The First Step: Triage
+from langchain.llms import Ollama
+from langchain_community.tools import DuckDuckGoSearchRun
+```
 
-Whether you’re just starting your day, or you’re in the middle of the chaos and just need to find some sanity … the first step is to get into triage mode.
+The above lines are just for importing. 
 
-Triage, as you probably know, is sorting through the chaos to prioritize: what needs to be done now, what needs to be done today, what needs to be done this week, and what can wait? You’re looking at urgency, but also what’s meaningful and important.
+To test stuff with goal-oriented Tasks and Agents, I utilized DuckDuckSearhGo for getting hands-on experience before making a full fledged-application. 
 
-Here’s what you might do:
+```
+ollama_llm = Ollama(model="llama3")
+search_tool = DuckDuckGoSearchRun()
 
-* Pick out the things that need to be done today. Start a Short List for things you’re going to do today. That might be important tasks for big projects, urgent tasks that could result in damage if you don’t act, smaller admin tasks that you really should take care of today, and responding to important messages. I would recommend being ruthless and cutting out as much as you can, having just 5 things on your plate if that’s at all possible. Not everything needs to be done today, and not every email needs to be responded to.
-* Push some things to tomorrow and the rest of the week. If you have deadlines that can be pushed back (or renegotiated), do that. Spread the work out over the week, even into next week. What needs to be done tomorrow? What can wait a day or two longer?
-* Eliminate what you can. That might mean just not replying to some messages that aren’t that important and don’t really require a reply. It might mean telling some people that you can’t take on this project after all, or that you need to get out of the commitment that you said you’d do. Yes, this is uncomfortable. For now, just put them on a list called, “To Not Do,” and plan to figure out how to get out of them later.
+@tool('DuckDuckGoSearch')
+def search_test(search_query: str):
+    """Search the information on web"""
+    return DuckDuckGoSearchRun().run(search_query)
+```
 
-OK, you have some breathing room and a manageable list now! Let’s shrink that down even further and just pick one thing.
+The above code simply uses the llama3 model using Langchain. Had to create a wrapper for DuckDuckGoSearchRun, there seems to be a problem with the API.
 
-## Next: Focus on One Thing
+```
+# search = DuckDuckGoSearchRun()
+# search_tool = Tool(
+#     name="search\_tool",
+#     description="A search tool used to query DuckDuckGo for search results when trying to find information from the internet.",
+#     func=search.run
+# )
+# search_tool = DuckDuckGoSearchRun()
+```
 
-With a lot on your plate, it’s hard to pick one thing to focus on. But that’s exactly what I’m going to ask you to do.
+The above code failed because of the API as mentioned above. I was able to find a solution [here](https://github.com/joaomdmoura/crewAI/issues/316#issuecomment-1981597742).
 
-Pick one thing, and give it your focus. Yes, there are a lot of other things you can focus on. Yes, they’re stressing you out and making it hard to focus. But think about it this way: if you allow it all to be in your head all the time, that will always be your mode of being. You’ll always be thinking about everything, stressing out about it all, with a frazzled mind … unless you start shifting.
+The code below initializes agents, sets parameters, resources they can use and the "Expected output" parameter should be well-defined. I'll play around these parameters, in part 2.
+```
+researcher = Agent(role='Researcher',
+  goal='Search the internet for the information requested',
+  backstory="""
+  You are a researcher. Using the information in the task, you find out some of the most popular facts about the topic along with some of the trending aspects.
+  You provide a lot of information thereby allowing a choice in the content selected for the final blog
+  """,
+  verbose=True,            # want to see the thinking behind
+  allow_delegation=False,  # Not allowed to ask any of the other roles
+  tools=[search_test],     # Is allowed to use the following tools to conduct research
+  llm=ollama_llm           # local model
+)
 
-The shift:
+writer = Agent(
+  role='Tech Content Strategist',
+  goal='Craft compelling content on a set of information provided by the researcher.',
+  backstory="""You are a writer known for your humorous but informative way of explaining. 
+  You transform complex concepts into compelling narratives.""",
+  verbose=True,            
+  allow_delegation=True,   # can ask the "researcher" for more information
+  llm=ollama_llm           
+)
+task1 = Task(description='arch about open source LLMs vs closed source LLMs. Your final answer MUST be a full analysis report',
+            agent=researcher,
+            expected_output="Test")
 
-* Pick something to focus on. Look at the triaged list from the first section … if you have 5-6 things on this Short List, you can assess whether there’s any super urgent, time-sensitive things you need to take care of. If there are, pick one of them. If not, pick the most important one — probably the one you have been putting off doing.
-* Clear everything else away. Just for a little bit. Close all browser tabs, turn off notifications, close open applications, put your phone away.
-* Put that one task before you, and allow yourself to be with it completely. Pour yourself into it. Think of it as a practice, of letting go (of everything else), of focus, of radical simplicity.
+task2 = Task(
+  description="""Using the insights provided, develop an engaging blog
+  post that highlights the most significant facts and differences between open-source LLMs and closed-source LLMs.
+  Your post should be informative yet accessible, catering to a tech-savvy audience.
+  Make it sound cool, and avoid complex words so it doesn't sound like AI.
+  Your final answer MUST be the full blog post of at least 4 paragraphs.
+  The target word count for the blog post should be between 1,500 and 2,500 words, with a sweet spot at around 2,450 words.""",
+  agent=writer, expected_output="TEst2"
+)
 
-When you’re done (or after 15-20 minutes have gone by at least), you can switch to something else. But don’t allow yourself to switch until then.
+crew = Crew(
+  agents=[researcher, writer],
+  tasks=[task1, task2],
+  verbose=2,) # You can set it to 1 or 2 for different logging levels
 
-By closing off all exits, by choosing one thing, by giving yourself completely to that thing … you’re now in a different mode that isn’t so stressful or spread thin. You’ve started a shift that will lead to focus and sanity.
-
-## Third: Schedule Time to Simplify
-
-Remember the To Not Do list above? Schedule some time this week to start reducing your projects, saying no to people, getting out of commitments, crossing stuff off your task list … so that you can have some sanity back.
-
-There are lots of little things that you’ve said “yes” to that you probably shouldn’t have. That’s why you’re overloaded. Protect your more important work, and your time off, and your peace of mind, by saying “no” to things that aren’t as important.
-
-Schedule the time to simplify — you don’t have to do it today, but sometime soon — and you can then not have to worry about the things on your To Not Do list until then.
-
-## Fourth: Practice Mindful Focus
-
-Go through the rest of the day with an attitude of “mindful focus.” That means that you are doing one thing at a time, being as present as you can, switching as little as you can.
-
-Think of it as a settling of the mind. A new mode of being. A mindfulness practice (which means you won’t be perfect at it).
-
-As you practice mindful focus, you’ll learn to practice doing things with an open heart, with curiosity and gratitude, and even joy. Try these one at a time as you get to do each task on your Short List.
-
-You’ll find that you’re not so overloaded, but that each task is just perfect for that moment. And that’s a completely new relationship with the work that you do, and a new relationship with life.
+result = crew.kickoff()
+```

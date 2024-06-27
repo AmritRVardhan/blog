@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/post-1/</link>
       <pubDate>Mon, 01 Apr 2024 02:01:58 +0530</pubDate>
       <guid>http://localhost:1313/posts/post-1/</guid>
-      <description>You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.&#xA;It all keeps piling up, and it can feel overwhelming.&#xA;How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?</description>
+      <description>This is the iteration 1 for creating and understanding Agentic views of Conversational AIs. Agentic AIs have recently shown to outperform LLMs alone. MoA has recently beaten GPT-4o.&#xA;I installed Ollama, pulled Lllama-3 8b, read about crewai, played around with Agents and their respective Tools, Actions, Tasks. I plan to extensively use it for my own applications.&#xA;Below is the code for the implementaiton&#xA;from crewai import Task, Agent, Crew, Process from crewai_tools import tool from langchain.</description>
     </item>
   </channel>
 </rss>

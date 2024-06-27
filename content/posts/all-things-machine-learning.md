@@ -1,8 +1,8 @@
 ---
 
-title: "Machine Learning Basics"
+title: "Machine Learning Everything"
 date: 2024-06-25T02:01:58+05:30
-description: "This is a question bank. At any point of time, I won't think that this question is too basic. I do not want to have knowledge gaps. Over time, I will try to sort this on topics and increasing difficulty. I will have to go through this arduous process and it'll be fun. There should be code with theory, else what is theory if not applied? 'Here' would be the link for codes."
+description: "This is a question bank of Data Science(Probability, ML, Statistics, DL) questions for myself"
 tags: [machine-learning]
 
 ---

@@ -7,7 +7,7 @@ tags: [machine-learning]
 
 ---
 
-This is a question bank. At any point of time, I won't think that this question is too basic. I do not want to have knowledge gaps. Over time, I will try to sort this on topics and increasing difficulty. I will have to go through this arduous process and it'll be fun. There should be code with theory, else what is theory if not applied? 'Here' would be the link for codes.
+This is a question bank for Machine Learning/Deep Learning/Data Science roles. Over time, I will try to sort this on topics and increasing difficulty. 
 
 1. **Explain Machine learning in Layman terms. - Tags [Basic Machine Learning, ]**
 1. **Do you have any training experience in Machine Learning? Elaborate. - Tags [Basic Machine Learning, Behavioral/real-life]**

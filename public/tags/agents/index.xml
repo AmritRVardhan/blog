@@ -6,12 +6,19 @@
     <description>Recent content in Agents on Amrit Raj Vardhan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2024 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jun 2024 02:01:58 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/agents/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating a Conversational Agent - Part 1</title>
+      <title>Conversational Agent Rabbit Hole</title>
+      <link>http://localhost:1313/posts/f1-conversational-agent-rabbit-hole/</link>
+      <pubDate>Sat, 29 Jun 2024 02:01:58 +0530</pubDate>
+      <guid>http://localhost:1313/posts/f1-conversational-agent-rabbit-hole/</guid>
+      <description>F1 Data Conversational Agent So my basic idea is to create a &amp;ldquo;chatbot?&amp;rdquo; for F1 that fetches live data, answers a user query, from OpenF1 and answers questions about all-things-f1. Here are the links I am going through.&#xA;inner thought - hmmm, Maybe I need to create architectural decisions right now, some UMLs etc inner demon - Naah bro, this is a self project, who cares about these stuff&#xA;API with Conversational Agent</description>
+    </item>
+    <item>
+      <title>Creating Conversational Agents - Part 1</title>
       <link>http://localhost:1313/posts/post-1/</link>
-      <pubDate>Mon, 01 Apr 2024 02:01:58 +0530</pubDate>
+      <pubDate>Thu, 27 Jun 2024 02:01:58 +0530</pubDate>
       <guid>http://localhost:1313/posts/post-1/</guid>
       <description>This is the iteration 1 for creating and understanding Agentic views of Conversational AIs. Agentic AIs have recently shown to outperform LLMs alone. MoA has recently beaten GPT-4o.&#xA;I installed Ollama, pulled Lllama-3 8b, read about crewai, played around with Agents and their respective Tools, Actions, Tasks. I plan to extensively use it for my own applications.&#xA;Below is the code for the implementaiton&#xA;from crewai import Task, Agent, Crew, Process from crewai_tools import tool from langchain.</description>
     </item>

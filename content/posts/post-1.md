@@ -1,7 +1,7 @@
 ---
 title: "Creating Conversational Agents - Part 1"
-date: 2024-04-01T02:01:58+05:30
-description: "Building a conversational agent using LLMs"
+date: 2024-06-27T02:01:58+05:30
+description: "Building a conversational agent using LLM(Ollama), Langchain, CrewAI."
 tags: [ai, agents]
 ---
 

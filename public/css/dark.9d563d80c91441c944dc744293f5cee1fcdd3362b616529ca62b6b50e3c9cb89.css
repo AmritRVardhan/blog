@@ -34,7 +34,7 @@ pre {
 blockquote {
   border-color: blue;
 }
-h1:not(.title) {
+h1 {
   counter-reset: h2
 }
 
@@ -54,14 +54,11 @@ h5,
 h6 {
   color: #ddd;
 }
-h1:not(.title)::before {
+h1::before:not(.title) {
   color: var(--darkMaincolor);
   content: "# ";
   counter-increment: h1;
   content: counter(h1) ". "
-}
-h1::before{
-  color: var(--darkMaincolor)
 }
 h2::before {
   color: var(--darkMaincolor);

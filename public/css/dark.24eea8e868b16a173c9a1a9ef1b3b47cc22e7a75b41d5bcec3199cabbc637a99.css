@@ -1,7 +1,6 @@
-body:not(.title) {
+body {
   color: white;
   background-color: #202124;
-  counter-reset: h1
 }
 
 ::-moz-selection {
@@ -34,19 +33,8 @@ pre {
 blockquote {
   border-color: blue;
 }
-h1:not(.title) {
-  counter-reset: h2
-}
 
-h2 {
-  counter-reset: h3
-}
-
-h3 {
-  counter-reset: h4
-}
-
-h1,
+h1:not(#title),
 h2,
 h3,
 h4,
@@ -54,14 +42,9 @@ h5,
 h6 {
   color: #ddd;
 }
-h1:not(.title)::before {
+h1::before {
   color: var(--darkMaincolor);
   content: "# ";
-  counter-increment: h1;
-  content: counter(h1) ". "
-}
-h1::before{
-  color: var(--darkMaincolor)
 }
 h2::before {
   color: var(--darkMaincolor);

@@ -60,9 +60,6 @@ h1:not(.title)::before {
   counter-increment: h1;
   content: counter(h1) ". "
 }
-h1::before{
-  color: var(--darkMaincolor)
-}
 h2::before {
   color: var(--darkMaincolor);
   content: "## ";

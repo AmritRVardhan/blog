@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/f1-conversational-agent-rabbit-hole/</link>
       <pubDate>Sat, 29 Jun 2024 02:01:58 +0530</pubDate>
       <guid>http://localhost:1313/posts/f1-conversational-agent-rabbit-hole/</guid>
-      <description>F1 Data Conversational Agent So my basic idea is to create a &amp;ldquo;chatbot?&amp;rdquo; for F1 that fetches live data, answers a user query, from OpenF1 and answers questions about all-things-f1. Here are the links I am going through.&#xA;inner thought - hmmm, Maybe I need to create architectural decisions right now, some UMLs etc inner demon - Naah bro, this is a self project, who cares about these stuff&#xA;API with Conversational Agent</description>
+      <description>F1 Data Conversational Agent So my basic idea is to create a &amp;ldquo;chatbot?&amp;rdquo; for F1 that fetches live data, answers a user query, from OpenF1 and answers questions about all-things-f1. Here are the links I am going through.&#xA;inner thought - hmmm, maybe I need to create architectural decisions right now, some UMLs etc.&#xA;inner demon - Naah bro, this is a self project, who cares about these stuff.&#xA;API with Conversational Agent all-MiniLM-L6-v2 SBERT </description>
     </item>
     <item>
       <title>Creating Conversational Agents - Part 1</title>
@@ -27,7 +27,7 @@
       <link>http://localhost:1313/posts/all-things-machine-learning/</link>
       <pubDate>Tue, 25 Jun 2024 02:01:58 +0530</pubDate>
       <guid>http://localhost:1313/posts/all-things-machine-learning/</guid>
-      <description>This is a question bank. At any point of time, I won&amp;rsquo;t think that this question is too basic. I do not want to have knowledge gaps. Over time, I will try to sort this on topics and increasing difficulty. I will have to go through this arduous process and it&amp;rsquo;ll be fun. There should be code with theory, else what is theory if not applied? &amp;lsquo;Here&amp;rsquo; would be the link for codes.</description>
+      <description>This is a question bank for Machine Learning/Deep Learning/Data Science roles. Over time, I will try to sort this on topics and increasing difficulty.&#xA;Explain Machine learning in Layman terms. - Tags [Basic Machine Learning, ] Machine Learning is a branch of Data Science that uses algorithms and tries to fit in a function to already given data points so as to better predict an unseen observable data. It comprises of several branches, mainly, supervised, unsupervised, semi-supervised and reinforcement learning.</description>
     </item>
     <item>
       <title>Links for Hugo based static website deployed in Github Pages</title>

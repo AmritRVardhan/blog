@@ -6,12 +6,12 @@
     <description>Recent content in Posts on Amrit Raj Vardhan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2024 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2024 02:01:58 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Learnings from a CTR prediction model</title>
+      <title>Learnings from getting back into Kaggle.</title>
       <link>http://localhost:1313/posts/learnings-from-ctr-prediction/</link>
-      <pubDate>Fri, 19 Jul 2024 02:01:58 +0530</pubDate>
+      <pubDate>Fri, 09 Aug 2024 02:01:58 +0530</pubDate>
       <guid>http://localhost:1313/posts/learnings-from-ctr-prediction/</guid>
       <description>Polars are better than Pandas I recently came in touch with Polars after using Pandas for a long while. It has been some learning to migrate from Pandas to Polars. But Polars has been less reliant on RAM and utilizes cores efficiently. Polars is written in Rust, and since Rust is a low level language, it is faster. It also supports Parallelism. On the other hand, Pandas is built on top of NumPy, which in turn is built in C, which should solve inefficiencies, but since there is a level of abstraction of NumPy, the memory handling of Python comes in between.</description>
     </item>

@@ -38,6 +38,9 @@ The dataset available to you does not have labeled outputs. Generally, the ML mo
 3. **Semi-supervised Learning**  
 4. **Reinforcement Learning**  
 
+
+#  **What is Central Limit Theorem?
+*Ah this sucks, recently I had to give an interview, and the inteviewer asked me what it was. At some point during my Master's I would have read it, but it completely skipped my mind. I couldn't answer. A quick google search left me embarassed.*
 #  **What is the difference between Regression and Classification?**
 #  **What is the difference between Structure and Unstructured data?**
 #  **What are assumptions of Linear Regression?**

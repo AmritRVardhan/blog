@@ -32,15 +32,24 @@ The above code is trying to handle outliers using capping, i.e. use IQR to cap o
 
 *Feature Engineering depends on the dataset and how each dataset performs when different steps are taken. The combination of feature engineering that can be done are endless. The below are expressed **generally**.
 
-**Outlier Handling**
+## **Outlier Handling**
 
-The above outlier only works for a Gaussian/Normal distribution. To understand Interquartile range, we first need to understand quartiles. Quartiles, in easier terms, are percentiles. If someone says 25% Quartile (or 1st Quartile), it means, 25% of the data falls behind it, if someone says, q2 or 50% Quartile, it means 50% of data falls behind it. Interquartile range is q3-q1. Where q3 refers to 75 percentile and q1 means, 25 percentile.
+The above outlier only works for a Gaussian/Normal distribution. To understand Interquartile range, we first need to understand quartiles. Quartiles, in easier terms, are percentiles. If someone says 25% Quartile (or 1st Quartile), it means, 25% of the data falls behind it, if someone says, q2 or 50% Quartile, it means 50% of data falls behind it. Interquartile range is 
 
-One method for Outlier Handling requires to cap to a max value and min value. For a gaussian distribution, the max value is found to be q3+1.5 * IQR. This goes very far away for a distribution as the standard deviation is more than 3. Similarly, the min values is q1-1.5 * IQR. 
+> q3-q1. 
+
+Where q3 refers to 75 percentile and q1 means, 25 percentile.
+
+One method for Outlier Handling requires to cap to a max value and min value. For a gaussian distribution, the max value is found to be 
+> q3+1.5 * IQR.
+
+This goes very far away for a distribution as the standard deviation is close to 3. Similarly, the min values is q1-1.5 * IQR. 
+
+> Random song suggestion. We're finally Landing - Home.
 
 Other methods for Outlier Handling includes removing the outliers altogether. In very rare cases, you can use algorithms like KNN to find the nearest neighbors and replace with a more appropriate value.
 
-**Missing Values**
+## **Missing Values**
 
 A good way to find missing values in the dataset(dataframe)is to use ```df.isnull().sum()```, if the values are 0 for all the columns in your dataset, it might mean there are no null values. But you can be tricked, so keep an eye for values like -1 or other set values that might signal missing values. If the values missing are very high it is better to remove the columns from the dataset all together. Very rarely does it mean, that it has an impact on the output.
 
@@ -50,11 +59,16 @@ Imputation using **Mean, Mode and Median** are more ways to handle missing data.
 
 There are more methods that include Random Sample Imputation or end of distribution imputation but these come with their own positives and negatives.
 
-**Categorical Data Engineering**
+## **Categorical Data Engineering**
 
 For columns that are categorical, there are various ways to encode it into numerals as ML/DL models understand numerals.
 
 One-hot encoding is converting the data into the number of distinct categories of a categorical into columns by *activating* the categoring as 1 and deactivating other categories as 0. The problem arises with one column having a lot of categories as it creates a sparse matrix which might be huge and memroy intensive. We can use **Frequency encoding** for this but, this suffers when there is a clear ordinality among the categories as they might not be indicative of the same and might disrupt the data further more. If two categories have the same frequency, this kind of encoding fails to distinguish between them.
 
 Target Encoding is... well who will write and reinvent the wheel at times. [Here](https://towardsdatascience.com/dealing-with-categorical-variables-by-using-target-encoder-a0f1733a4c69)
+
+## LightGBM
+
+I also came to learn about LightGBM and how it handles categorical data intrinsically, in face the documentation states, it is faster than OHE by a factor of 8x. LGBM was created by Microsoft and uses Gradient Boosting similar to xgboost and works better than xgboost in specific cases. It works on creating depth-wise tree growth unlike, xgboost which works on level-wise tree growth. Coincidentally, Polars, the starting topic of this blog, doesn't support it, so if you do start using Polars, you can convert to a Pandas dataframe before using LightGBM.
+
 
